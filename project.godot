@@ -11,9 +11,7 @@ config_version=5
 [application]
 
 config/name="Ninja Game"
-run/main_scene="uid://bb4h6mioo2qu2"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
