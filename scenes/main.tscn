@@ -4,20 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://wl4dspoa0w81" path="res://assets/images2/Screenshot 2026-01-09 204345.png" id="2_0wfyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
-size = Vector2(281, 188)
+size = Vector2(1720, 188)
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(824, 413)
+position = Vector2(833, 722)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(833, 567)
+position = Vector2(823, 1012)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1, 0)
+scale = Vector2(6.0633802, 1)
 texture = ExtResource("2_0wfyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.5, 1)
+position = Vector2(3, 1)
 shape = SubResource("RectangleShape2D_0wfyh")
