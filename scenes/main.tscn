@@ -9,7 +9,7 @@ size = Vector2(1720, 188)
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(833, 722)
+position = Vector2(827, 756)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(823, 1012)
