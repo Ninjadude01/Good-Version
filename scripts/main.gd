@@ -4,19 +4,30 @@ var score: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	_setup_level()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _setup_level() -> void:
+	
+	#connect enemy
+	var enemies = $Levelroot.get_node_or_null("Enemies")
+	if enemies:
+		for enemy in enemies.get_children():
+			enemy.player_died.connect(_on_player_died)
+	
 	#connect orb
 	var orbs = $Levelroot.get_node_or_null("Orbs")
 	if orbs:
 		for orb in orbs.get_children():
 			orb.collected.connect(increase_score)
-
+			
+func _on_player_died(body):
+	print(body)
+	print("Player killed")
+	
 #score#
 func increase_score() -> void:
 	score += 1

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dpgevtyru3a2b"]
+[gd_scene load_steps=9 format=4 uid="uid://dpgevtyru3a2b"]
 
 [ext_resource type="Texture2D" uid="uid://cywm7ufw8x7mo" path="res://assets/images2/New Piskel.png" id="1_ksju7"]
 [ext_resource type="PackedScene" uid="uid://3f7lyskftp0l" path="res://scenes/player.tscn" id="2_6iamk"]
 [ext_resource type="Texture2D" uid="uid://cd2aoayjur4va" path="res://assets/images2/blue and red blocks.png" id="2_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://dy12syuh5onle" path="res://scenes/orb.tscn" id="4_x42e6"]
+[ext_resource type="PackedScene" uid="uid://dgi6lhg1nsu0v" path="res://scenes/turtle.tscn" id="5_6761a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iamk"]
 texture = ExtResource("1_ksju7")
@@ -5715,12 +5716,14 @@ tile_map_data = PackedByteArray("AADK/88AAAAAAAAAAADK/9AAAAAAAAEAAADK/9EAAAAAAAI
 tile_set = SubResource("TileSet_nsrm0")
 
 [node name="Player" parent="." instance=ExtResource("2_6iamk")]
-position = Vector2(357, 806)
+position = Vector2(362, 850)
 
 [node name="Orbs" type="Node2D" parent="."]
 
 [node name="Orb1" parent="Orbs" instance=ExtResource("4_x42e6")]
 position = Vector2(-1012, 912)
 
-[node name="Orb2" parent="Orbs" instance=ExtResource("4_x42e6")]
-position = Vector2(21, 867)
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Turtle" parent="Enemies" instance=ExtResource("5_6761a")]
+position = Vector2(851, 864)
