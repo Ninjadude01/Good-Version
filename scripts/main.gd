@@ -7,7 +7,7 @@ func _ready() -> void:
 	_setup_level()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _setup_level() -> void:
@@ -23,10 +23,14 @@ func _setup_level() -> void:
 	if orbs:
 		for orb in orbs.get_children():
 			orb.collected.connect(increase_score)
-			
+
+
+#signals
+
+#death
 func _on_player_died(body):
-	print(body)
-	print("Player killed")
+	print("you died")
+	body.die()
 	
 #score#
 func increase_score() -> void:

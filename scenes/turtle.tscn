@@ -75,7 +75,7 @@ frame = 6
 frame_progress = 0.33808693
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 52)
+position = Vector2(-5, 53)
 shape = SubResource("RectangleShape2D_vgn41")
 
 [node name="Timer" type="Timer" parent="."]
