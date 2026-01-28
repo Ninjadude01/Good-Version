@@ -12,27 +12,27 @@ func _process(_delta: float) -> void:
 
 func _setup_level() -> void:
 	
-	#connect enemy
+	#connect enemys
 	var enemies = $Levelroot.get_node_or_null("Enemies")
 	if enemies:
 		for enemy in enemies.get_children():
 			enemy.player_died.connect(_on_player_died)
 	
-	#connect orb
+	#connect orbs
 	var orbs = $Levelroot.get_node_or_null("Orbs")
 	if orbs:
 		for orb in orbs.get_children():
 			orb.collected.connect(increase_score)
 
 
-#signals
+#---signals---
 
-#death
+	#death
 func _on_player_died(body):
-	print("you died")
+	print("you died lol")
 	body.die()
-	
-#score#
+
+	#score#
 func increase_score() -> void:
 	score += 1
 	print(score)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbx1fneljmtdn"
-path="res://.godot/imported/Hit (32x32).png-199101394a38fc25bfaff010082801f4.ctex"
+uid="uid://qpuw1hgfmlkg"
+path="res://.godot/imported/Evil Red enemy.png-76aac28d4bd4afc99d9259368f11b593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/player/Hit (32x32).png"
-dest_files=["res://.godot/imported/Hit (32x32).png-199101394a38fc25bfaff010082801f4.ctex"]
+source_file="res://assets/images2/Evil Red enemy.png"
+dest_files=["res://.godot/imported/Evil Red enemy.png-76aac28d4bd4afc99d9259368f11b593.ctex"]
 
 [params]
 

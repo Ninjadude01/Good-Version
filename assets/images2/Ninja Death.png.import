@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfw5wu5fsvbsg"
-path="res://.godot/imported/Jump (32x32).png-b3c1835a203c8421a3fd81a188159ccb.ctex"
+uid="uid://8xpd8pe5e5w7"
+path="res://.godot/imported/Ninja Death.png-f687b9baa3a30411d9de00135c1505e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/player/Jump (32x32).png"
-dest_files=["res://.godot/imported/Jump (32x32).png-b3c1835a203c8421a3fd81a188159ccb.ctex"]
+source_file="res://assets/images2/Ninja Death.png"
+dest_files=["res://.godot/imported/Ninja Death.png-f687b9baa3a30411d9de00135c1505e9.ctex"]
 
 [params]
 
