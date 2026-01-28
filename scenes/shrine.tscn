@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://djn8rd65wtl4x"]
+
+[ext_resource type="Texture2D" uid="uid://71g81ucvmgiw" path="res://assets/images2/trees, bushes and shrine.png" id="1_byhlw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34a3k"]
+atlas = ExtResource("1_byhlw")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1ic8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34a3k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Shrine" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-64.5, -62)
+scale = Vector2(1.4479166, 1.4305556)
+sprite_frames = SubResource("SpriteFrames_c1ic8")
