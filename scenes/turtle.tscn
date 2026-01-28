@@ -1,42 +1,35 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgi6lhg1nsu0v"]
+[gd_scene load_steps=11 format=3 uid="uid://dgi6lhg1nsu0v"]
 
 [ext_resource type="Script" uid="uid://mq8y4wnshfnk" path="res://scripts/turtle.gd" id="1_1l2iw"]
-[ext_resource type="Texture2D" uid="uid://bywij1uhjpuct" path="res://assets/images2/turtle.png" id="1_diba4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1l2iw"]
-atlas = ExtResource("1_diba4")
-region = Rect2(0, 0, 288, 288)
+[ext_resource type="Texture2D" uid="uid://cr2gnieb7r73i" path="res://assets/images2/turtle new walk.png" id="2_1l2iw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbk6c"]
-atlas = ExtResource("1_diba4")
-region = Rect2(288, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(0, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7kcg0"]
-atlas = ExtResource("1_diba4")
-region = Rect2(576, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(288, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrtyu"]
-atlas = ExtResource("1_diba4")
-region = Rect2(864, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(576, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2r5w"]
-atlas = ExtResource("1_diba4")
-region = Rect2(1152, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(864, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4lu78"]
-atlas = ExtResource("1_diba4")
-region = Rect2(1440, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(1152, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bc3fs"]
-atlas = ExtResource("1_diba4")
-region = Rect2(1728, 0, 288, 288)
+atlas = ExtResource("2_1l2iw")
+region = Rect2(1440, 0, 288, 288)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_86a57"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1l2iw")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hbk6c")
 }, {
@@ -57,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgn41"]
@@ -71,15 +64,14 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_86a57")
 animation = &"running"
 autoplay = "running"
-frame = 6
-frame_progress = 0.33808693
+frame_progress = 0.14462733
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 53)
+position = Vector2(-5, 62)
 shape = SubResource("RectangleShape2D_vgn41")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
