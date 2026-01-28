@@ -164,4 +164,4 @@ position = Vector2(-3, -82)
 shape = SubResource("CircleShape2D_fjrip")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -139)
+position = Vector2(-2, -108)
