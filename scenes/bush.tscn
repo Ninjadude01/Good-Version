@@ -23,6 +23,6 @@ texture_filter = 1
 script = ExtResource("1_ehqem")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, 1)
-scale = Vector2(-1.0992783, 1)
+position = Vector2(61.5, -18)
+scale = Vector2(-1.5333061, 1.1319444)
 sprite_frames = SubResource("SpriteFrames_tu87o")
