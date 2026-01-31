@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://3f7lyskftp0l"]
+[gd_scene load_steps=34 format=3 uid="uid://3f7lyskftp0l"]
 
 [ext_resource type="Script" uid="uid://cb6k1oo625rgh" path="res://scripts/player.gd" id="1_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://bewpocp7s0k6v" path="res://assets/images2/player/Ninja drawing5 (1).png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://8xpd8pe5e5w7" path="res://assets/images2/Ninja Death.png" id="2_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cghdq3f1fq332" path="res://assets/images2/player/Ninja jump.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://hkiywh4rvyi4" path="res://assets/images2/player/ninja walk.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://c02nclunevg4i" path="res://assets/images2/respawn animation.png" id="5_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_qlg0r")
@@ -45,6 +46,42 @@ region = Rect2(864, 0, 288, 288)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
 atlas = ExtResource("2_dqkch")
 region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31cv2"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf23h"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(0, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
 atlas = ExtResource("4_tuyoq")
@@ -118,6 +155,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_i4ail")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a38lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ni07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l71n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke2ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujl30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31cv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf23h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt7fs")
+}],
+"loop": false,
+"name": &"respawning",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3v2ag")
 }, {
 "duration": 1.0,
@@ -152,8 +221,10 @@ texture_filter = 1
 position = Vector2(-3.8146973e-06, -1)
 scale = Vector2(0.8680556, 1)
 sprite_frames = SubResource("SpriteFrames_4lu35")
-animation = &"idle"
+animation = &"respawning"
 autoplay = "idle"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-10, 47.75)
