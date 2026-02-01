@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgi6lhg1nsu0v"]
+[gd_scene load_steps=13 format=3 uid="uid://dgi6lhg1nsu0v"]
 
 [ext_resource type="Script" uid="uid://mq8y4wnshfnk" path="res://scripts/turtle.gd" id="1_1l2iw"]
 [ext_resource type="Texture2D" uid="uid://cr2gnieb7r73i" path="res://assets/images2/turtle new walk.png" id="2_1l2iw"]
@@ -53,22 +53,43 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgn41"]
-size = Vector2(252, 168)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1l2iw"]
+radius = 31.016125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbk6c"]
+size = Vector2(44.990486, 125.97467)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7kcg0"]
+radius = 33.002937
+height = 96.00576
 
 [node name="Turtle" type="Area2D"]
 script = ExtResource("1_1l2iw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(19.999996, -19.999996)
+scale = Vector2(0.61111104, 0.61111104)
 sprite_frames = SubResource("SpriteFrames_86a57")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.14462733
+frame_progress = 0.25642446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 62)
-shape = SubResource("RectangleShape2D_vgn41")
+position = Vector2(61, -3)
+shape = SubResource("CircleShape2D_1l2iw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(19.979866, 44.501614)
+rotation = 1.5676985
+scale = Vector2(1.0000004, 1.0000004)
+shape = SubResource("RectangleShape2D_hbk6c")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-6.9999847, 7)
+rotation = 1.5676985
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_7kcg0")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://3f7lyskftp0l"]
+[gd_scene load_steps=37 format=3 uid="uid://3f7lyskftp0l"]
 
 [ext_resource type="Script" uid="uid://cb6k1oo625rgh" path="res://scripts/player.gd" id="1_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://bewpocp7s0k6v" path="res://assets/images2/player/Ninja drawing5 (1).png" id="2_dqkch"]
@@ -82,6 +82,18 @@ region = Rect2(864, 0, 288, 288)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
 atlas = ExtResource("5_tuyoq")
 region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfne"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnwbv"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl8cc"]
+atlas = ExtResource("5_tuyoq")
+region = Rect2(864, 0, 288, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
 atlas = ExtResource("4_tuyoq")
@@ -180,10 +192,19 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dt7fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnwbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl8cc")
 }],
 "loop": false,
 "name": &"respawning",
-"speed": 3.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,

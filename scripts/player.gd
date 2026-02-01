@@ -7,10 +7,12 @@ const JUMP_VELOCITY = -1000.0
 var alive = true
 var can_move = true
 
+
 func _physics_process(delta: float) -> void:
 	
 	if !alive:
 		return
+	
 	#Add animation
 	if velocity.x > 1 or velocity.x < -1:
 		animated_sprite_2d.animation = "running"
@@ -46,3 +48,7 @@ func _physics_process(delta: float) -> void:
 func die() -> void:
 	animated_sprite_2d.play("dying")
 	alive = false
+	
+
+
+	

@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://befxqegptgcd5"]
+
+[ext_resource type="Texture2D" uid="uid://bcm0qxfxh3yv1" path="res://assets/images2/floating rocks + more.png" id="1_bcw2b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2030g"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xbdj"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3y3w"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76pds"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkkof"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(300, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm830"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xot0"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_artef"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(200, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi25y"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(300, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0fln"]
+atlas = ExtResource("1_bcw2b")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1fcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2030g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xbdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3y3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76pds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkkof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm830")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xot0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_artef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi25y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0fln")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Floating Rock" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-154.5, -154.5)
+scale = Vector2(4.09, 4.09)
+sprite_frames = SubResource("SpriteFrames_q1fcy")
+autoplay = "default"
+frame = 6
+frame_progress = 0.8411035
