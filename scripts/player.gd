@@ -51,4 +51,5 @@ func die() -> void:
 	
 
 
-	
+func _on_gate_trigger_body_entered(body: Node2D):
+	print("BODY ENTERED:", body)
