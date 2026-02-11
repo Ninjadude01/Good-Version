@@ -133,8 +133,8 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(580.99994, 337.73544)
-scale = Vector2(24.239998, 25.749418)
+position = Vector2(334.5, 75.88599)
+scale = Vector2(14.379999, 15.275439)
 sprite_frames = SubResource("SpriteFrames_ryoc8")
 autoplay = "default"
 frame = 8

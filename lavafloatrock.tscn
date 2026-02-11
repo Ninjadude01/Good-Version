@@ -84,8 +84,8 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(923, 923)
-scale = Vector2(37.920002, 37.920002)
+position = Vector2(577.5, 577.5)
+scale = Vector2(24.100002, 24.100002)
 sprite_frames = SubResource("SpriteFrames_4ull6")
 autoplay = "default"
 frame = 2
