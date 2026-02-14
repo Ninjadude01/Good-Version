@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2edvyqiq5fkj"]
+[gd_scene format=3 uid="uid://d2edvyqiq5fkj"]
 
 [ext_resource type="Script" uid="uid://by5qwrreb5tgy" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dpgevtyru3a2b" path="res://scenes/levels/level1.tscn" id="2_0wfyh"]
@@ -31,14 +31,14 @@ corner_radius_bottom_left = 5
 shadow_color = Color(0, 0, 0, 0.67058825)
 shadow_size = 5
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1117386333]
 script = ExtResource("1_0wfyh")
 
-[node name="LevelRoot" parent="." instance=ExtResource("2_0wfyh")]
+[node name="LevelRoot" parent="." unique_id=1497098424 instance=ExtResource("2_0wfyh")]
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=528886600]
 
-[node name="Score Panel" type="Panel" parent="HUD"]
+[node name="Score Panel" type="Panel" parent="HUD" unique_id=1809817975]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -49,19 +49,19 @@ offset_bottom = 343.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0wfyh")
 
-[node name="Score Label" type="Label" parent="HUD/Score Panel"]
+[node name="Score Label" type="Label" parent="HUD/Score Panel" unique_id=1938614535]
 texture_filter = 1
 layout_mode = 0
 offset_left = 24.0
-offset_top = 4.0
+offset_top = -34.0
 offset_right = 177.0
-offset_bottom = 91.0
+offset_bottom = 151.0
 theme_override_font_sizes/font_size = 19
-text = "	 Orb Power 
+text = "Orb Power 
    Level: 0
 "
 
-[node name="Death Panel" type="Panel" parent="HUD"]
+[node name="Death Panel" type="Panel" parent="HUD" unique_id=1565735008]
 texture_filter = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -73,7 +73,7 @@ offset_bottom = 427.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sugp2")
 
-[node name="Death Label" type="Label" parent="HUD/Death Panel"]
+[node name="Death Label" type="Label" parent="HUD/Death Panel" unique_id=1164383926]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 14.0
@@ -82,15 +82,15 @@ offset_bottom = 42.0
 theme_override_font_sizes/font_size = 20
 text = "Deaths: 0"
 
-[node name="Fade" type="ColorRect" parent="HUD"]
+[node name="Fade" type="ColorRect" parent="HUD" unique_id=1421645554]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2860.0
-offset_top = -2924.0
-offset_right = 10567.0
-offset_bottom = 1353.0
+offset_left = -2826.0
+offset_top = -2963.0
+offset_right = 10601.0
+offset_bottom = 1314.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
