@@ -1,9 +1,13 @@
 extends Node2D
 @onready var fade: ColorRect = $HUD/Fade
+@onready var score_label: Label = $"HUD/Score Panel/Score Label"
+@onready var death_label: Label = $"HUD/Death Panel/Death Label"
+
 
 
 var score: int = 0
 var level: int = 1
+var deathnum = 0
 var current_level_root: Node = null
 
 # Called when the node enters the scene tree for the first time.
@@ -68,13 +72,19 @@ func _on_exit_body_entered(body : Node2D) -> void:
 	#Death
 func _on_player_died(body):
 	body.die()
+	score = 0
+	score_label.text = "	 Orb Power 
+   Level: %s" %score
+	deathnum+=1
+	death_label.text = "Deaths: %s" %deathnum
 	await _load_level(level, false ,true)
-
+	
 
 	#Score
 func increase_score() -> void:
 	score += 1
-	print(score)
+	score_label.text = "	 Orb Power 
+   Level: %s" %score
 	
 	#Fade
 func _fade(to_alpha: float) -> void:
