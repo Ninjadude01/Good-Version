@@ -6,8 +6,8 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(153.71207, 102.67708)
-scale = Vector2(8.505833, 8.505833)
+position = Vector2(97.47208, 64.677086)
+scale = Vector2(5.4658327, 5.465833)
 texture = ExtResource("1_hliig")
 region_enabled = true
 region_rect = Rect2(100, 43, 37, 25)

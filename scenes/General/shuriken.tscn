@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cigvlbmqunbbm"]
+
+[ext_resource type="Script" uid="uid://ccm0a7tt4d58r" path="res://scripts/shuriken.gd" id="1_oxlf8"]
+[ext_resource type="Texture2D" uid="uid://cq6icmcf26w6p" path="res://assets/imagesgood/lvl1assets/orb and shuriken.png" id="2_rtwtg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rtwtg"]
+radius = 50.01
+
+[node name="Shuriken" type="Area2D"]
+position = Vector2(0, -2)
+script = ExtResource("1_oxlf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-7.6293945e-06, 0.34781647)
+scale = Vector2(0.4695652, 0.4695652)
+texture = ExtResource("2_rtwtg")
+region_enabled = true
+region_rect = Rect2(28, 20, 230, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.6956482)
+shape = SubResource("CircleShape2D_rtwtg")

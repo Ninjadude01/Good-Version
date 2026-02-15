@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dldfgvn4vjb4s"]
+
+[ext_resource type="PackedScene" uid="uid://3f7lyskftp0l" path="res://scenes/General/player.tscn" id="1_r1vs7"]
+
+[node name="level4" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Background"]
+
+[node name="Player" parent="." instance=ExtResource("1_r1vs7")]
+position = Vector2(113, 86)
+
+[node name="Node2D3" type="Node2D" parent="."]
+
+[node name="Node2D4" type="Node2D" parent="."]
+
+[node name="Node2D5" type="Node2D" parent="."]
+
+[node name="Node2D6" type="Node2D" parent="."]
