@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsnribv7vihwt"]
+
+[ext_resource type="Script" uid="uid://cmvyuipq0m3sm" path="res://scripts/capybara.gd" id="1_he84x"]
+[ext_resource type="Texture2D" uid="uid://bhit4fm8pivkr" path="res://assets/imagesgood/lvl1assets/Capybara (1).png" id="1_nlxw7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he84x"]
+atlas = ExtResource("1_nlxw7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rfww"]
+atlas = ExtResource("1_nlxw7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d6kp"]
+atlas = ExtResource("1_nlxw7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pbiwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he84x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rfww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d6kp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_he84x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-105.5, -96.99999)
+scale = Vector2(7.5937505, 7.0625005)
+sprite_frames = SubResource("SpriteFrames_pbiwp")
+autoplay = "default"
+frame = 2
+frame_progress = 0.5691177

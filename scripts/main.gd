@@ -73,8 +73,8 @@ func _on_exit_body_entered(body : Node2D) -> void:
 func _on_player_died(body):
 	body.die()
 	score = 0
-	score_label.text = "	 Orb Power 
-   Level: %s" %score
+	score_label.text = "Orb Power  
+  Level: %s" %score
 	deathnum+=1
 	death_label.text = "Deaths: %s" %deathnum
 	await _load_level(level, false ,true)
@@ -83,8 +83,8 @@ func _on_player_died(body):
 	#Score
 func increase_score() -> void:
 	score += 1
-	score_label.text = "	 Orb Power 
-   Level: %s" %score
+	score_label.text = "Orb Power 
+	  Level: %s" %score
 	
 	#Fade
 func _fade(to_alpha: float) -> void:

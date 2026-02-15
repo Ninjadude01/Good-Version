@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1fmg58d7dyi5"]
+
+[ext_resource type="Texture2D" uid="uid://71g81ucvmgiw" path="res://assets/imagesgood/lvl1assets/trees, bushes and shrine.png" id="1_lvwx8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysiov"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(576, 576, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hldw5"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(288, 576, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4a6f"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(0, 576, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy38b"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5au81"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g2b4"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00ci2"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(0, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72c8c"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(288, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyt8o"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(576, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y08jf"]
+atlas = ExtResource("1_lvwx8")
+region = Rect2(864, 288, 288, 288)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg8iu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysiov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hldw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4a6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy38b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5au81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g2b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00ci2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72c8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyt8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y08jf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Green Trees" type="Node2D"]
+texture_filter = 1
+position = Vector2(-55, 10)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-164.5, -167)
+scale = Vector2(2.1423612, 2.1597223)
+sprite_frames = SubResource("SpriteFrames_kg8iu")
+autoplay = "default"
+frame_progress = 0.3192593
