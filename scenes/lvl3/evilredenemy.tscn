@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://2m76c03y5vl6"]
+
+[ext_resource type="Texture2D" uid="uid://qpuw1hgfmlkg" path="res://assets/imagesgood/lvl3assets/Evil Red enemy.png" id="1_6ggo2"]
+[ext_resource type="Script" uid="uid://e3qakh40phpa" path="res://scripts/evilredenemy.gd" id="1_788k2"]
+[ext_resource type="FontFile" uid="uid://b5wm5dwar7jr0" path="res://assets/imagesgood/generalassets/HomeVideo-BLG6G.ttf" id="3_1x645"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_788k2"]
+atlas = ExtResource("1_6ggo2")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x645"]
+atlas = ExtResource("1_6ggo2")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqq1o"]
+atlas = ExtResource("1_6ggo2")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edsxm"]
+atlas = ExtResource("1_6ggo2")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bh3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_788k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x645")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqq1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edsxm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcb1m"]
+size = Vector2(187.5, 270)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_788k2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2bh3c")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.75, 11)
+shape = SubResource("RectangleShape2D_dcb1m")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -100.0
+offset_top = -167.0
+offset_right = 86.0
+offset_bottom = -140.0
+theme_override_fonts/font = ExtResource("3_1x645")
+step = 10.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -13,7 +13,7 @@ var throw_timer := 0.0
 
 @export var shuriken_scene: PackedScene
 @export var normal_speed = 450.0
-@export var acceleration = 1100
+@export var acceleration = 1400
 @export var friction = 700
 
 func _physics_process(delta: float) -> void:

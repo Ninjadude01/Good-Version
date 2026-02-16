@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgi6lhg1nsu0v"]
+[gd_scene load_steps=14 format=3 uid="uid://dgi6lhg1nsu0v"]
 
 [ext_resource type="Script" uid="uid://mq8y4wnshfnk" path="res://scripts/turtle.gd" id="1_1l2iw"]
 [ext_resource type="Texture2D" uid="uid://cr2gnieb7r73i" path="res://assets/imagesgood/lvl2assets/turtle new walk.png" id="2_1l2iw"]
+[ext_resource type="FontFile" uid="uid://b5wm5dwar7jr0" path="res://assets/imagesgood/generalassets/HomeVideo-BLG6G.ttf" id="3_0jfbd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbk6c"]
 atlas = ExtResource("2_1l2iw")
@@ -96,5 +97,19 @@ shape = SubResource("CapsuleShape2D_7kcg0")
 wait_time = 4.0
 autostart = true
 
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(11.967455, 1.5996099, 2.0465, 1)
+texture_filter = 1
+offset_left = -46.0
+offset_top = -73.0
+offset_right = 85.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0, 0.47292545, 0.011355812, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0.06666667, 1)
+theme_override_fonts/font = ExtResource("3_0jfbd")
+theme_override_font_sizes/font_size = 30
+step = 20.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

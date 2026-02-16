@@ -1,7 +1,7 @@
 extends Area2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-@export var speed = 500
+@export var speed = 600
 @export var rotation_speed = 10
 @export var lifetime = 2.0
 var direction = 1
@@ -22,8 +22,6 @@ func _physics_process(delta):
 	rotation += rotation_speed * direction * delta
 	
 
-func _on_area_entered(area):
-	
-	print("hit", area.name)
+func _on_area_entered(_area):
 	queue_free()
 	
