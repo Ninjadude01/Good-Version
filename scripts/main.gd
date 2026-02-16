@@ -11,8 +11,10 @@ var current_level_root: Node = null
 var levels = {
 	1: preload("res://scenes/levels/level1.tscn"),
 	2: preload("res://scenes/levels/level2.tscn"),
-	3: preload("res://scenes/levels/level3.tscn")
+	3: preload("res://scenes/levels/level3.tscn"),
+	4: preload("res://scenes/levels/level4.tscn")
 }
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	

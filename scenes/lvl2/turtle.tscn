@@ -64,6 +64,7 @@ radius = 33.002937
 height = 96.00576
 
 [node name="Turtle" type="Area2D"]
+collision_layer = 5
 script = ExtResource("1_1l2iw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
