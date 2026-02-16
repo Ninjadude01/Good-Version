@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 
 var speed = 450.0
@@ -7,6 +8,8 @@ const JUMP_VELOCITY = -1000.0
 var alive = true
 var can_move = true
 var facing = 1
+var throw_cooldown := 1.0
+var throw_timer := 0.0
 
 @export var shuriken_scene: PackedScene
 @export var normal_speed = 450.0
@@ -14,6 +17,12 @@ var facing = 1
 @export var friction = 700
 
 func _physics_process(delta: float) -> void:
+	if throw_timer > 0:
+			throw_timer -=delta
+			$ProgressBar.value = throw_cooldown - throw_timer
+	
+	else:
+		$ProgressBar.value = throw_cooldown
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
@@ -66,7 +75,9 @@ func die() -> void:
 	alive = false
 	
 func shoot(): 
-	var shuriken = shuriken_scene.instantiate()
-	shuriken.position = position + Vector2(facing * 100, 0)
-	shuriken.direction = facing
-	get_parent().add_child(shuriken)
+	if throw_timer <=0:
+		throw_timer = throw_cooldown
+		var shuriken = shuriken_scene.instantiate()
+		shuriken.position = position + Vector2(facing * 100, 30)
+		shuriken.direction = facing
+		get_parent().add_child(shuriken)

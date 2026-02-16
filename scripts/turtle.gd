@@ -9,7 +9,6 @@ var direction = 1
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
@@ -23,3 +22,8 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and body.alive:
 		emit_signal("player_died", body)
+	
+	if body.name == "shuriken":
+		print("shuriken hit")
+		
+		

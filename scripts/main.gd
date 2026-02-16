@@ -4,12 +4,15 @@ extends Node2D
 @onready var death_label: Label = $"HUD/Death Panel/Death Label"
 
 
-
 var score: int = 0
 var level: int = 1
 var deathnum = 0
 var current_level_root: Node = null
-
+var levels = {
+	1: preload("res://scenes/levels/level1.tscn"),
+	2: preload("res://scenes/levels/level2.tscn"),
+	3: preload("res://scenes/levels/level3.tscn")
+}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -36,6 +39,8 @@ func _load_level(level_number: int, first_load: bool, reset_score: bool) -> void
 	add_child(current_level_root)
 	current_level_root.name = "Levelroot"
 	_setup_level(current_level_root)
+
+
 	
 	#Fade in
 	await _fade(0.0)
