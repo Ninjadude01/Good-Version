@@ -2,7 +2,6 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var progress_bar: ProgressBar = $ProgressBar
 
-
 var speed = 450.0
 const JUMP_VELOCITY = -1000.0
 var alive = true
@@ -20,13 +19,12 @@ func _physics_process(delta: float) -> void:
 	if throw_timer > 0:
 			throw_timer -=delta
 			$ProgressBar.value = throw_cooldown - throw_timer
-	
+		
 	else:
 		$ProgressBar.value = throw_cooldown
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
-
 		
 	if !alive:
 		return

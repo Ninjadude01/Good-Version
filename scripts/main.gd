@@ -4,6 +4,7 @@ extends Node2D
 @onready var death_label: Label = $"HUD/Death Panel/Death Label"
 
 
+
 var score: int = 0
 var level: int = 1
 var deathnum = 0
@@ -81,7 +82,7 @@ func _on_player_died(body):
 	body.die()
 	score = 0
 	score_label.text = "Orb Power  
-  Level: %s" %score
+ 	Level: %s" %score
 	deathnum+=1
 	death_label.text = "Deaths: %s" %deathnum
 	await _load_level(level, false ,true)
@@ -91,7 +92,7 @@ func _on_player_died(body):
 func increase_score() -> void:
 	score += 1
 	score_label.text = "Orb Power 
-	  Level: %s" %score
+	 Level: %s" %score
 	
 	#Fade
 func _fade(to_alpha: float) -> void:

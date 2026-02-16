@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://2m76c03y5vl6"]
 
 [ext_resource type="Texture2D" uid="uid://qpuw1hgfmlkg" path="res://assets/imagesgood/lvl3assets/Evil Red enemy.png" id="1_6ggo2"]
-[ext_resource type="Script" uid="uid://e3qakh40phpa" path="res://scripts/evilredenemy.gd" id="1_788k2"]
+[ext_resource type="Script" uid="uid://e3qakh40phpa" path="res://scripts/red.gd" id="1_788k2"]
 [ext_resource type="FontFile" uid="uid://b5wm5dwar7jr0" path="res://assets/imagesgood/generalassets/HomeVideo-BLG6G.ttf" id="3_1x645"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_788k2"]
@@ -43,7 +43,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcb1m"]
 size = Vector2(187.5, 270)
 
-[node name="Area2D" type="Area2D"]
+[node name="red" type="Area2D"]
 script = ExtResource("1_788k2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -57,11 +57,13 @@ shape = SubResource("RectangleShape2D_dcb1m")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 texture_filter = 1
-offset_left = -100.0
-offset_top = -167.0
-offset_right = 86.0
-offset_bottom = -140.0
+offset_left = -97.0
+offset_top = -180.0
+offset_right = 89.0
+offset_bottom = -144.0
 theme_override_fonts/font = ExtResource("3_1x645")
+theme_override_font_sizes/font_size = 35
 step = 10.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

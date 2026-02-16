@@ -279,11 +279,12 @@ position = Vector2(-2, -108)
 position_smoothing_speed = 0.5
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 10
 texture_filter = 1
-offset_left = -874.0
-offset_top = 66.0
-offset_right = -707.0
-offset_bottom = 120.0
+offset_left = -868.0
+offset_top = 110.0
+offset_right = -709.0
+offset_bottom = 157.0
 theme_override_colors/font_color = Color(0, 1.1974806, 0.775853, 1)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("8_xvbvd")
