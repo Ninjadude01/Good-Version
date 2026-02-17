@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 func _on_area_entered(_area: Area2D) -> void:
-	health -= 20
+	health -= 5
 	health_bar.value = health
 	
 	if health <= 0:

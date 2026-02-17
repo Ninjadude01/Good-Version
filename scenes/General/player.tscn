@@ -260,10 +260,10 @@ texture_filter = 1
 position = Vector2(-3.8146973e-06, -1)
 scale = Vector2(0.8680556, 1)
 sprite_frames = SubResource("SpriteFrames_4lu35")
-animation = &"respawning"
+animation = &"idle"
 autoplay = "idle"
-frame = 8
-frame_progress = 1.0
+frame = 1
+frame_progress = 0.45130533
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1

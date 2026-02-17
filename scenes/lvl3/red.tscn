@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2m76c03y5vl6"]
+[gd_scene load_steps=12 format=3 uid="uid://2m76c03y5vl6"]
 
 [ext_resource type="Texture2D" uid="uid://qpuw1hgfmlkg" path="res://assets/imagesgood/lvl3assets/Evil Red enemy.png" id="1_6ggo2"]
 [ext_resource type="Script" uid="uid://e3qakh40phpa" path="res://scripts/red.gd" id="1_788k2"]
@@ -41,29 +41,63 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcb1m"]
-size = Vector2(187.5, 270)
+size = Vector2(319.875, 524.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eso7"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynft7"]
+bg_color = Color(1, 0.17254902, 0.32156864, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
 
 [node name="red" type="Area2D"]
 script = ExtResource("1_788k2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7.6293945e-06, -7.6293945e-06)
+scale = Vector2(1.7569444, 1.7569444)
 sprite_frames = SubResource("SpriteFrames_2bh3c")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.75, 11)
+position = Vector2(-14.9375, -9)
 shape = SubResource("RectangleShape2D_dcb1m")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0, 0.4509804, 1, 1)
 texture_filter = 1
-offset_left = -97.0
-offset_top = -180.0
-offset_right = 89.0
-offset_bottom = -144.0
+offset_left = -101.0
+offset_top = -305.0
+offset_right = 82.0
+offset_bottom = -269.0
 theme_override_fonts/font = ExtResource("3_1x645")
 theme_override_font_sizes/font_size = 35
-step = 10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_4eso7")
+step = 5.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+texture_filter = 1
+offset_left = -101.0
+offset_top = -342.0
+offset_right = 82.0
+offset_bottom = -304.0
+theme_override_fonts/font = ExtResource("3_1x645")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynft7")
+text = "  Boss HP:"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
