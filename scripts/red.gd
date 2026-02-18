@@ -4,6 +4,7 @@ extends Area2D
 
 signal player_died
 
+
 var health = 100
 
 func _ready() -> void:
